@@ -24,9 +24,10 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-console.log('Hello World! (from create-block-beforeafterimages block)');
-/* eslint-enable no-console */
+const container = document.querySelector('.container');
+document.querySelector('.slider').addEventListener('input', e => {
+  container.style.setProperty('--position', `${e.target.value}%`);
+});
 /******/ })()
 ;
 //# sourceMappingURL=view.js.map
