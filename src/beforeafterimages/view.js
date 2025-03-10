@@ -20,7 +20,16 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-const container = document.querySelector('.container');
-document.querySelector('.slider').addEventListener('input', (e) => {
-  container.style.setProperty('--position', `${e.target.value}%`);
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const containers = document.querySelectorAll('.container');
+    const sliders = document.querySelectorAll('.slider');
+
+    containers.forEach((container, index) => {
+        const slider = sliders[index];
+        if (slider) {
+            slider.addEventListener('input', (e) => {
+            container.style.setProperty('--position', `${e.target.value}%`);
+            });
+        }
+    });
+});
