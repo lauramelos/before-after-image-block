@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
-
+import Slider from './slider';
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -41,7 +41,11 @@ export default function Edit() {
 		templateLock: 'all',
 	} );
 	return (
-		<div { ...innerBlocksProps }>
+		<div { ...blockProps }>
+			<div className="container" >
+				<div {...innerBlocksProps} className="image-container"></div>
+				<Slider />
+			</div>
 		</div>
 	);
 }
