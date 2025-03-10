@@ -10,7 +10,6 @@
 .wp-block-create-block-beforeafterimages {
   display: grid;
   place-items: center;
-  min-height: 100vh;
 }
 .wp-block-create-block-beforeafterimages *,
 .wp-block-create-block-beforeafterimages *::after,
@@ -52,9 +51,10 @@
   bottom: 0;
   background-color: rgb(210, 210, 210);
   width: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 0;
   display: block;
   overflow: hidden;
+  text-align: right;
+  text-indent: 10px;
 }
 .wp-block-create-block-beforeafterimages .image-container figure:first-child {
   position: absolute;
@@ -83,7 +83,6 @@
   width: 0.2rem;
   height: 100%;
   background-color: #fff;
-  /* z-index: 10; */
   right: var(--position);
   transform: translateX(50%);
   pointer-events: none;
@@ -100,6 +99,5 @@
   right: var(--position);
   transform: translate(50%, -50%);
   pointer-events: none;
-  /* z-index: 100; */
   box-shadow: -1px 1px 1px hsla(0, 50%, 2%, 0.5);
 }
